@@ -1,0 +1,8 @@
+This is a simulated log file:
+
+[2023-07-06 10:15:23] INFO: Application started.
+[2023-07-06 10:15:30] ERROR: Invalid input received from user.
+[2023-07-06 10:15:40] INFO: Processing completed successfully.
+[2023-07-06 10:15:45] WARNING: Disk space is running low.
+[2023-07-06 10:15:50] INFO: Task completed.
+[2023-07-06 10:15:55] ERROR: File not found: exemplu.txt
