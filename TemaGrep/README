@@ -1,0 +1,5 @@
+    Create a bash script that takes as input a log file and executes a search in it, using grep for the keyword “error”. As soon as the “error” word is 
+    detected through the log file, the script should return a message saying “Errors found in log <name_of_log>”.
+
+    Note: Do not forget to include the fullpath to the file before it’s name, when called as a parameter to the script run. Also, the log file must be 
+    populated by you.
