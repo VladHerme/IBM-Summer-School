@@ -1,0 +1,25 @@
+Urmatorul exercitiu trebuie tratat ca si o implementare ad-hoc de workaround pentru integrare/productie.
+
+Se da problema urmatoare: Avem un script care proceseaza date bancare, acesta ruleaza uneori in gol desi si-a terminat executia propriu-zisa si a procesat toate datele clientilor bancii.
+
+Se cere implementarea unui workaround de catre echipa de Business catre echipa de DevOps in scriptul de pornire al acestui job, astfel incat cei de la departamentul de Business sa poata apela scriptul de pornire in ideea de a monitoriza executia batch-ului de procesare date (daemon), dar in acelasi timp sa beneficieze si de o interfata in linia de comanda, deoarece businessul este un grup de persoane non-tehnice, ce nu detin cunostinte de OS (ps, kill).
+
+Scriptul trebuie implementat cu prioritate deoarece un ticket Critical a fost ridicat spre echipa de DevOps.
+
+Scrie un bash script ce porneste un alt bash script dupa cum urmeaza:
+
+Start.sh porneste daemon.sh
+
+2. Daemon.sh va contine un loop infinit ( va rula in gol)
+
+3. Odata pornit, nu vrem sa oprim rularea lui start.sh, astfel incat daemon.sh va avea nevoie sa se detaseze de parintele sau (start.sh). (Hint: background process in Linux, nohup in linux)
+
+4. Odata ce daemon.sh ruleaza independent de start.sh, start.sh va afisa PID ul lui daemon.sh si va intreba:
+
+“Do you want to kill the daemon process (y/n)?”
+
+5. Raspunsul va fi citit de la tastatura cu y sau n.
+
+6. Pe firul de executie y, start.sh executa kill la PID ul lui daemon.sh si va afisa “daemon.sh killed”
+
+7. Pe firul de executie n, start.sh va afisa “Killing daemon cancelled. Exiting…” si va iesi fortat din script.
