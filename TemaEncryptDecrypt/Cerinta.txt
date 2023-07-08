@@ -1,0 +1,21 @@
+Security Measures – Write a bash script that can encrypt a file using OpenSSL , moves the encrypted file to another location in the system (this should simulate a file transfer between 2 servers in production), and decrypts it automatically there. Please use at least 2 other block ciphers (instead of CBC, use for example ECB, GCM, CFB, CTR)
+
+Study OpenSSL – Cryptographic command
+
+Encryption command:
+Openssl enc –aes-256-cbc –salt –in file.txt –out file.enc –k “parola”
+
+Move to another location
+
+Decryption command:
+Openssl enc –d –aes-256-cbc –in file.enc –out file.txt –k “parola”
+
+Check each file (enc, txt) with “cat” command
+
+Enc – mentions that we want to encrypt/decrypt with openssl
+Aes-256-cbc – symmetric encryption algorithm on 256 bits using a CBC block cipher
+Salt – random number added to encrypted file for security (generated automatically)
+In – input
+Out – output
+k – mentions we need to use a password for decryption
+D – in decryption command, it means decrypt
