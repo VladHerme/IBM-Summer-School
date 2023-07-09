@@ -1,0 +1,22 @@
+Given 2 folders named: Financials and NAS_IN, present in Desktop, execute the following:
+
+1. Manually create the folders with the following permissions:
+
+- User has Read, Write, Execute
+- Group has Read & Execute
+- Others have nothing
+
+2. Manually create a file in NAS_IN named banking_data.txt with full rights for everyone, that contains the following:
+Value$ Name1 Name2 Car
+
+3. Create a bash script that will:
+Automatically create 3 files in Financials folder: (money.txt, name.txt, car.txt)
+
+Then the script should be able to output them into the files as it follows:
+
+Move only the first column values into money.txt
+Move only second and third column values into name.txt 
+Move only third column values into car.txt 
+
+Create a backup folder inside Financials folder and copy the files there with the name : m.txt, n.txt, c.txt
+-     Print each file from backup folder to the terminal in the end
